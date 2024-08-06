@@ -1,0 +1,29 @@
+#data_promoter: "data/breast_vert_promoter.csv"
+#data_provider: "data/breast_vert_provider.csv"
+#data_promoter: "data/default_credit_vert_promoter.csv"
+#data_provider: "data/default_credit_vert_provider.csv"
+data_promoter: "data/dataset_ap.csv"
+data_provider: "data/dataset_pp.csv"
+#data_promoter: "data/added_dataset_ap.csv"
+#data_provider: "data/added_dataset_pp.csv"
+#data_promoter: "data/vehicle_scale_vert_promoter.csv"
+#data_provider: "data/vehicle_scale_vert_provider.csv"
+idx: "id"
+label_name: "y"
+data_promoter_train: "breast_vert_promoter_train"
+data_promoter_val: "breast_vert_promoter_val"
+data_provider_train: "breast_vert_provider_train"
+data_provider_val: "breast_vert_provider_val"
+
+#data_promoter_train: "dataset_ap"
+#data_promoter_val: "dataset_ap"
+#data_provider_train: "dataset_pp"
+#data_provider_val: "dataset_pp"
+
+eval_type: "binary"
+task_type: "classification"
+loss_func: "cross_entropy"
+tree_depth: 5
+tree_num: 3
+learning_rate: 0.1
+

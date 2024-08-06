@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@import './_variable.scss';
+
+:root {
+    --el-color-success  : #35c895;
+    --el-color-primary  : #438bff;
+    --el-color-danger   : #f85564;
+    --el-color-error    : #f85564;
+}
+
+.color-danger{color: $--color-danger !important;}
+.el-input__suffix{
+    .el-input__suffix-inner{
+        align-items: center;
+    }
+}
+.el-message-box__status{
+    &.el-icon{
+        position: absolute;
+        top: 50%;
+    }
+}
+.el-header{
+    --el-header-height: 80px !important;
+    height: var(--el-header-height);
+}
+.el-table__empty-block{min-height:100px;}
+.el-alert{border-radius: 4px;}
+.el-form{
+    &.el-form--inline{
+        .el-form-item{display: inline-flex;}
+    }
+    &.flex-form{
+        .el-form-item{display: flex;}
+    }
+    .el-range-editor.el-input__inner{display: flex;}
+    .el-form-item{display: block;}
+    .el-button{vertical-align:top;}
+}
+.el-date-editor{
+    .el-icon{line-height:2.3;}
+}
+#pane-result{
+    .result{
+        min-height: 200px;
+        padding-right:20px;
+    }
+    .el-form-item{
+        display: flex;
+        margin-bottom: 0;
+    }
+}
+.el-input{
+    .el-button{vertical-align:middle;}
+}
+.el-tag--dark.el-tag--success{
+    background-color: var(--el-color-success);
+    border-color: var(--el-color-success);
+}
+.el-button--primary{
+    background-color: var(--el-color-primary);
+    border-color: var(--el-color-primary);
+}
+.el-button--danger{
+    background-color: var(--el-color-danger);
+    border-color: var(--el-color-danger);
+}
+.el-radio__input{
+    &.is-checked{
+        .el-radio__inner{background: var(--el-color-primary);}
+        & + .el-radio__label{color: var(--el-color-primary);}
+    }
+}
+.el-dialog__title{font-size: 16px;}
+.el-overlay-dialog{overflow:auto;}
+.el-tabs__nav-wrap.is-top{
+    .el-tabs__nav-scroll{height:auto;}
+    .el-tabs__nav-next,
+    .el-tabs__nav-prev{
+        padding-top: 16px;
+        line-height: 1px;
+    }
+}
+.el-upload-list{
+    .el-progress {top:0;}
+    .el-progress__text {
+        top: -17px;
+        max-width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        word-break: break-all;
+        text-overflow: ellipsis;
+    }
+}
+.el-upload-list__item-thumbnail{object-fit: contain;}
+.el-badge.el-message__badge{position:absolute;}

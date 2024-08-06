@@ -1,0 +1,14 @@
+{
+    "param_class": "../param.py/HorzLinearParam",
+    "role": {
+      "promoter": {
+        "program": "horz_linr_client.py/HorzLinRClient"
+      },
+      "provider": {
+        "program": "horz_linr_client.py/HorzLinRClient"
+      },
+      "arbiter": {
+        "program": "horz_linr_arbiter.py/HorzLinRArbiter"
+      }
+    }
+  }

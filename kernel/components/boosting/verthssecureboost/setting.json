@@ -1,0 +1,11 @@
+{
+  "param_class": "../param.py/VertSecureBoostParam",
+  "role": {
+    "promoter": {
+      "program": "vert_hs_secureboosting_promoter.py/VertHsSecureBoostingPromoter"
+    },
+    "provider": {
+      "program": "vert_hs_secureboosting_provider.py/VertHsSecureBoostingProvider"
+    }
+  }
+}

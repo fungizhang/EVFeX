@@ -1,0 +1,14 @@
+{
+    "param_class": "../param.py/VertLinearParam",
+    "role": {
+      "promoter": {
+        "program": "vert_linr_promoter.py/VertLinRPromoter"
+      },
+      "provider": {
+        "program": "vert_linr_provider.py/VertLinRProvider"
+      },
+      "arbiter": {
+        "program": "vert_linr_arbiter.py/VertLinRArbiter"
+      }
+    }
+  }

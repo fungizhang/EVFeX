@@ -98,8 +98,8 @@ class VertDecisionTreeProvider(DecisionTree):
         self.new_ver = True
 
         # zfj: code version control
-        #self.zfj_ver = True
-        self.zfj_ver = False
+        self.zfj_ver = True
+        #self.zfj_ver = False
 
     def init_compressor(self):
         para = self.transfer_inst.cipher_compressor_para.get(idx=0)

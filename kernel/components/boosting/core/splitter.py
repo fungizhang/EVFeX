@@ -389,12 +389,12 @@ class Splitter(object):
             split_info_list, g_h_info = value
             for split_info in split_info_list:
                 ### zfj: 天冕的解密，在smm-xgb中取消。如果要使用天冕，则需要打开
-                split_info.sum_grad, split_info.sum_hess = decrypter.decrypt(split_info.sum_grad), decrypter.decrypt(
-                    split_info.sum_hess)
-                g_sum, h_sum = decrypter.decrypt(g_h_info.sum_grad), decrypter.decrypt(g_h_info.sum_hess)
+                #split_info.sum_grad, split_info.sum_hess = decrypter.decrypt(split_info.sum_grad), decrypter.decrypt(
+                #    split_info.sum_hess)
+                #g_sum, h_sum = decrypter.decrypt(g_h_info.sum_grad), decrypter.decrypt(g_h_info.sum_hess)
                 ### zfj：取消后的。如果要使用天冕，则需要注释掉
-                #split_info.sum_grad, split_info.sum_hess = split_info.sum_grad, split_info.sum_hess
-                #g_sum, h_sum = g_h_info.sum_grad, g_h_info.sum_hess
+                split_info.sum_grad, split_info.sum_hess = split_info.sum_grad, split_info.sum_hess
+                g_sum, h_sum = g_h_info.sum_grad, g_h_info.sum_hess
         else:
             nid, package = value
             split_info_list = cipher_decompressor.unpack_split_info(nid, package)  # unpack and decrypt

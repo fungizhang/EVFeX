@@ -103,8 +103,8 @@ class VertDecisionTreePromoter(DecisionTree):
 
         # zfj: code version control
         self.use_gpu = False
-        #self.zfj_ver = True
-        self.zfj_ver = False
+        self.zfj_ver = True
+        #self.zfj_ver = False
 
         # zfj: 直方图相减所需的存档
         self.histogram_saved = {}

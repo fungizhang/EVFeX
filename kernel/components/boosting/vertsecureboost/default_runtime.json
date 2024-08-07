@@ -12,7 +12,6 @@
   "use_gpu": false,
   "top_rate": 0.2,
   "other_rate": 0.1,
-  "cipher_compress_error": 7,
   "__comment1": "zfj: cipher_compress_error is revised by zfj, 7 to none",
   "new_ver": true,
   "tree_param": {

@@ -7,13 +7,13 @@
 
 Fangjiao Zhang <sup>a</sup>,  Li Wang <sup>a</sup>, Chang Cui <sup>a</sup>, Qingshu Meng <sup>a</sup>, Min Yang <sup>b</sup>
 
-**Keywords**:  Vertical Federated Learning, Secure Multi-Party Computation, XGBoost, Secure Matrix Multiplication, QR decomposition.
+**Keywords**: Vertical Federated Learning, Secure Multi-Party Computation, XGBoost, Secure Matrix Multiplication, QR decomposition.
 
 <sup>a</sup> Wuhan Tianyu Information Industry Co., Ltd, Wuhan, China
 
 <sup>b</sup> School of Cyber Science and Engineering, Wuhan University, Wuhan, China
 
-**Abstract**:Federated Learning is a distributed machine learning paradigm that enables multiple participants to collaboratively train models without compromising the privacy of any party involved. Currently, vertical federated learning based on XGBoost is widely used in the industry due to its interpretability. However, existing vertical federated XGBoost algorithms either lack sufficient security, exhibit low efficiency, or struggle to adapt to large-scale datasets. To address these issues, we propose EVFeX, an efficient vertical federated XGBoost algorithm based on optimized secure matrix multiplication, which eliminates the need for time-consuming homomorphic encryption and achieves a level of security equivalent to encryption. It greatly enhances efficiency and remains unaffected by data volume. The proposed algorithm is compared with three state-of-the-art algorithms on three datasets, demonstrating its superior efficiency and uncompromised accuracy. We also provide theoretical analyses of the algorithm's privacy and conduct a comparative analysis of privacy, efficiency, and accuracy with related algorithms.
+**Abstract**: Federated Learning is a distributed machine learning paradigm that enables multiple participants to collaboratively train models without compromising the privacy of any party involved. Currently, vertical federated learning based on XGBoost is widely used in the industry due to its interpretability. However, existing vertical federated XGBoost algorithms either lack sufficient security, exhibit low efficiency, or struggle to adapt to large-scale datasets. To address these issues, we propose EVFeX, an efficient vertical federated XGBoost algorithm based on optimized secure matrix multiplication, which eliminates the need for time-consuming homomorphic encryption and achieves a level of security equivalent to encryption. It greatly enhances efficiency and remains unaffected by data volume. The proposed algorithm is compared with three state-of-the-art algorithms on three datasets, demonstrating its superior efficiency and uncompromised accuracy. We also provide theoretical analyses of the algorithm's privacy and conduct a comparative analysis of privacy, efficiency, and accuracy with related algorithms.
 
 ## The Table of Contents
 
@@ -36,18 +36,14 @@ Before running or modifying the code, you need to:
   
   ```
   # git clone this repository
-  git clone https://github.com/visitworld123/Twin-sight
-  cd Twin-sight
+  git clone https://github.com/fungizhang/EVFeX.git
+  cd EVFeX
 
   # create new anaconda env 
-  conda create -n Twin-sight python=3.8 -y
-  conda activate Twin-sight
+  conda create -n EVFeX python=3.9 -y
+  conda activate EVFeX
   ```
-- required environment in `environment.yaml`
-  ```
-  # install environment dependencies
-  conda env create -f environment.yaml
-  ```
+
 - required packages in `requirements.txt`
   ```
   # install python dependencies

@@ -53,30 +53,38 @@ Before running or modifying the code, you need to:
 ## :partying_face: How to run:
 
 ```
-python main.py
+cd ./kernel/examples/demo/vert_sbt/
+python wefe-vert-sbt.py
 ```
 
-In config.yaml, you can change the hyper-parameters and some settings. In our experiments, we use wandb as the default tool to record the running metrics like Acc and Loss. **Change recording tool:** If you want to use tensorboard to record, you can set `record_tool = 'tensorboard`.
 
-Please refer to the `./configs/default.py` file for the list of hyper-parameters. We list some main parameters and its meaning for  quick start. 
 
-You can set these parameters by modify  `default.py` or a new `yaml` file and use it by `python main.py --config_file xxx.yaml` to indicate a certain config file.
+In ```/kernel/examples/demo/vert_sbt/binary_config.yaml```, you can change the hyper-parameters and some settings. 
+```
+### dataset BREAT
+data_promoter: "data/breast_vert_promoter.csv"
+data_provider: "data/breast_vert_provider.csv"
+### dataset LOAN
+#data_promoter: "data/default_credit_vert_promoter.csv"
+#data_provider: "data/default_credit_vert_provider.csv"
+### dataset FINANCE
+#data_promoter: "data/dataset_ap.csv"
+#data_provider: "data/dataset_pp.csv"
 
-`--client_num_in_total`: The total number of clients in FL system, you can set 10 and 100 to reproduce our experiments.
+idx: "id"
+label_name: "y"
+data_promoter_train: "breast_vert_promoter_train"
+data_promoter_val: "breast_vert_promoter_val"
+data_provider_train: "breast_vert_provider_train"
+data_provider_val: "breast_vert_provider_val"
 
-`--client_num_per_round`: The number of sampled clients every round, also called sampling rate.
-
-`--partition_alpha`: Our main results based on LDA partition method, you can set 0.1 and 0.05.
-
-`--global_epochs_per_round`: Local epochs for every client.
-
-`--comm_round`: Global Communication round.
-
-`--SSFL_setting`: Which SSFL setting we standalone, you can choose `partial_client` or `partial_data`. Partial_client (PC) means partial clients have fully-labeled data, and other clients have fully-unlabeled data. It is also the focus of our discussion in this paper. Partial_data (PD) means every client has partially labeled data.
-
-`--SSL_method`: The pesudo-label strategy. We can choose `fixmatch` or `freematch`.
-
-`--model`: There are three different models we can choose which represents different self-supervised model including `SemiFed_SimCLR`, `SemiFed_SimSiam`, `SemiFed_BYOL`.
+eval_type: "binary"
+task_type: "classification"
+loss_func: "cross_entropy"
+tree_depth: 5
+tree_num: 3
+learning_rate: 0.1
+```
 
 ## :evergreen_tree: Detail of our method:
 The main code of Twin-sight is in `trainers/normal_trainer.py`. In this file, the function of `train_semiFed_model_labeled_client_PC` performs the training process of the fully-labeled client under a partial_client setting. At the same time, `train_semiFed_model_unlabeled_client_PC` conducts training of fully-unlabeled clients under this setting.

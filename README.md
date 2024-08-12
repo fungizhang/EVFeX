@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="EVFeX.png" height=180, width=600>
+    <img src="EVFeX.png" height=500, width=800>
 </p>
 
 

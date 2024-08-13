@@ -21,13 +21,9 @@ Fangjiao Zhang <sup>a</sup>,  Li Wang <sup>a</sup>, Chang Cui <sup>a</sup>, Qing
 :wink: If Twin-sight is helpful to you, please star this repo. Thanks! :hugs: 
 - [:grimacing: Dependencies and installation](#grimacing-dependencies-and-installation)
 - [:partying\_face: How to run](#partying_face-how-to-run)
-- [:evergreen\_tree: Detail of Twin-sight](#evergreen_tree-detail-of-twin-sight)
-- [:rose: Experimental results](#rose-experimental-results)
+- [:evergreen\_tree: Detail of our method](#evergreen_tree-detail-of-twin-sight)
 - [:smiley: Citation](#smiley-citation)
-- [:closed\_book: License](#closed_book-license)
-- [:smiling\_face\_with\_three\_hearts: Acknowledgement](#smiling_face_with_three_hearts-acknowledgement)
 - [:phone: Contact](#phone-contact)
-- [:star: Star History](#star-star-history)
 
 ##  :grimacing: Dependencies and installation
 Before running or modifying the code, you need to:
@@ -87,48 +83,13 @@ learning_rate: 0.1
 ```
 
 ## :evergreen_tree: Detail of our method:
-The main code of Twin-sight is in `trainers/normal_trainer.py`. In this file, the function of `train_semiFed_model_labeled_client_PC` performs the training process of the fully-labeled client under a partial_client setting. At the same time, `train_semiFed_model_unlabeled_client_PC` conducts training of fully-unlabeled clients under this setting.
 
-`model/SemiFed.py` includes the model architecture of each local client. It is consisted of a unsup_model (SimCLR, BYOL, SimSiam) and a sup_model (ResNet18 in our method).
+Our code framework is based on the open-source code of ```WeFe``` (https://github.com/tianmiantech/WeFe). For a detailed introduction to WeFe, please refer to ```README_WeFe.md```.
 
-## :rose: Experimental results
- <p align="center">
-    <img src="asset/exp1.jpg">
-</p>
- <p align="center">
-    <img src="asset/exp2.jpg">
-</p>
 
 ## :smiley: Citation
 If our work is useful for your research, please consider citing:
 
-    @inproceedings{
-        zhang2024robust,
-        title={Robust Training of Federated Models with Extremely Label Deficiency},
-        author={Yonggang Zhang and Zhiqin Yang and Xinmei Tian and Nannan Wang and Tongliang Liu and Bo Han},
-        booktitle={The Twelfth International Conference on Learning Representations},
-        year={2024},
-        url={https://openreview.net/forum?id=qxLVaYbsSI}
-    }
-
-    @inproceedings{
-        yang2023fedfed,
-        title={FedFed: Feature Distillation against Data Heterogeneity in Federated Learning},
-        author={Zhiqin Yang and Yonggang Zhang and Yu Zheng and Xinmei Tian and Hao Peng and Tongliang Liu and Bo Han},
-        booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-        year={2023}
-    }
-
-## :closed_book: License
-
-This project is licensed under <a rel="license" href=""> MIT</a>. Redistribution and use should follow this license.
-## :smiling_face_with_three_hearts: Acknowledgement
-
-This project is partly based on [VHL](https://github.com/wizard1203/VHL) and [FedEMA](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedssl)
 
 ## :phone: Contact
-If you have any questions, please feel free to reach me out at `yangzqccc@buaa.edu.cn`. 
-
-## :star: Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=visitworld123/Twin-sight&type=Date)](https://star-history.com/#visitworld123/Twin-sight&Date)
+If you have any questions, please feel free to reach me out at `fungizhang@gmail.com`. 

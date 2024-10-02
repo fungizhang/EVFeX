@@ -90,7 +90,14 @@ Our code framework is based on the open-source code of ```WeFe``` (https://githu
 ## :smiley: Citation
 If our work is useful for your research, please consider citing:
 
-Under Review...
+@article{zhang2024evfex,
+  title={EVFeX: An efficient vertical federated XGBoost algorithm based on optimized secure matrix multiplication},
+  author={Zhang, Fangjiao and Wang, Li and Cui, Chang and Meng, Qingshu and Yang, Min},
+  journal={Signal Processing},
+  pages={109686},
+  year={2024},
+  publisher={Elsevier}
+}
 
 ## :phone: Contact
 If you have any questions, please feel free to reach me out at `fungizhang@gmail.com`. 
